@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed7d929-1826-410b-b267-df9496943dfd" name="变更" comment="项目更新">
-      <change afterPath="$PROJECT_DIR$/src/Configer/MyListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Configer/button.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Configer/functionButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aboutUs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bgMusic.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Configer/background_music.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/aboutListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/backgroundMusicListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/intermediateModeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/repentanceModeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/seniorModeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buttonListener/simpleModeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/button_click.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Configer/realTimeLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configer/MyListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configer/button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configer/button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configer/functionButton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/initWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/initWindow.java" afterDir="false" />
     </list>
@@ -22,33 +32,45 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Jl0r8tWaUWUIhGlikg3rqVrRJK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -75,7 +97,10 @@
       <workItem from="1672649779933" duration="2057000" />
       <workItem from="1672714267926" duration="11510000" />
       <workItem from="1672742341377" duration="698000" />
-      <workItem from="1672794875689" duration="1476000" />
+      <workItem from="1672794875689" duration="5370000" />
+      <workItem from="1672801973355" duration="3899000" />
+      <workItem from="1672884673124" duration="4431000" />
+      <workItem from="1672897824381" duration="3424000" />
     </task>
     <task id="LOCAL-00001" summary="项目更新">
       <created>1672651870388</created>
@@ -91,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672714394107</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="项目更新">
+      <created>1672796614145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672796614145</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +141,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="项目更新" />
     <option name="LAST_COMMIT_MESSAGE" value="项目更新" />
   </component>

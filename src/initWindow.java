@@ -1,20 +1,18 @@
 import java.awt.*;
-import java.awt.Color;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import javax.swing.ButtonGroup;
-import javax.swing.JToggleButton;
 
-import Configer.*;
+import buttonListener.*;
+import buttonListener.aboutListener;
+import buttonListener.backgroundMusicListener;
+import buttonListener.intermediateModeListener;
+import buttonListener.seniorModeListener;
+import buttonListener.simpleModeListener;
+import buttonListener.repentanceModeListener;
 
 /**
  * 初始化窗口
@@ -27,8 +25,10 @@ public class initWindow {
     static int location_Y = 0;
     static int mid_X = 0;
     static int mid_Y = 0;
-    static int width = 450;
-    static int height = 503;
+    static int image_width = 450; //计算机量出来的是450
+    static int image_height = 498;
+    static int width = image_width + 13;
+    static int height = image_height + 100;
     static int button_width = 100;
     static int button_height = 30;
     static int button_spacing = (width - button_width * 3) / 2;
@@ -53,7 +53,7 @@ public class initWindow {
         mid_X = (location_X - width) / 2;
         mid_Y = (location_Y - height) / 2;
         jf.setTitle("中国象棋——却凭纹楸聊自笑,雄如刘项亦闲争.");
-        jf.setBounds(mid_X, mid_Y, width + 10, height + 100);
+        jf.setBounds(mid_X, mid_Y, width, height);
         jf.setVisible(true);
         jf.setResizable(false);
 
@@ -67,47 +67,48 @@ public class initWindow {
         System.out.println("窗口初始化完成！");
     }
 
-    public void initGui(JFrame jf_){
+    public void initGui(JFrame jf_) {
         // 在窗体中绘制棋盘
         ImageIcon icon = new ImageIcon("./bg.jpg");
         JLabel label = new JLabel(icon);
         jf_.setLayout(null);
         jf_.add(label);
-        label.setBounds(0, 0, width, height);
-        label.setVisible(true);
+        label.setBounds(0, 0, image_width, image_height);
 
         //在窗体中绘制背景
         ImageIcon Icon = new ImageIcon("./bg1.png");
         JLabel Label = new JLabel(Icon);
         jf_.setLayout(null);
         jf_.add(Label);
-        Label.setBounds(0, height - 5, width, height);
+        Label.setBounds(0, image_height - 10, width, height);
         Label.setVisible(true);
     }
 
-    public void initButton(JFrame jf_){
+    public void initButton(JFrame jf_) {
+        //按照流式布局组件
+        jf_.setLayout(new FlowLayout());
+
         //向窗体中添加按钮
         JButton btn0 = new JButton("简单模式");
         JButton btn1 = new JButton("中级模式");
         JButton btn2 = new JButton("高级模式");
         JButton btn3 = new JButton("悔棋");
-        JButton btn4 = new JButton("退出游戏");
+        JButton btn4 = new JButton("背景音乐");
         JButton btn5 = new JButton("关于我们");
 
-        //jf.setLayout(new FlowLayout());
-        MyListener listener0 = new MyListener();
-        MyListener listener1 = new MyListener();
-        MyListener listener2 = new MyListener();
-        MyListener listener3 = new MyListener();
-        MyListener listener4 = new MyListener();
-        MyListener listener5 = new MyListener();
+        ActionListener SimpleModeListener = new simpleModeListener();
+        ActionListener IntermediateModeListener = new intermediateModeListener();
+        ActionListener SeniorModeListener = new seniorModeListener();
+        ActionListener RepentanceModeListener = new repentanceModeListener();
+        ActionListener BackgroundMusicListener = new backgroundMusicListener();
+        ActionListener AboutListener =  new aboutListener();
 
-        btn0.addActionListener(listener0);
-        btn1.addActionListener(listener1);
-        btn2.addActionListener(listener2);
-        btn3.addActionListener(listener3);
-        btn4.addActionListener(listener4);
-        btn5.addActionListener(listener5);
+        btn0.addActionListener(SimpleModeListener);
+        btn1.addActionListener(IntermediateModeListener);
+        btn2.addActionListener(SeniorModeListener);
+        btn3.addActionListener(RepentanceModeListener);
+        btn4.addActionListener(BackgroundMusicListener);
+        btn5.addActionListener(AboutListener);
 
         jf_.add(btn0);
         jf_.add(btn1);
@@ -116,12 +117,20 @@ public class initWindow {
         jf_.add(btn4);
         jf_.add(btn5);
 
-        btn0.setBounds(0, height - 30, button_width, button_height);
-        btn1.setBounds(button_width * 1 + button_spacing * 1, height - 30, button_width, button_height);
-        btn2.setBounds(button_width * 2 + button_spacing * 2 - 5, height - 30, button_width, button_height);
-        btn3.setBounds(0, height, button_width, button_height);
-        btn4.setBounds(button_width * 1 + button_spacing * 1, height, button_width, button_height);
-        btn5.setBounds(button_width * 2 + button_spacing * 2 - 5, height, button_width, button_height);
+          //设置按钮为透明
+//        btn0.setContentAreaFilled(false);
+//        btn1.setContentAreaFilled(false);
+//        btn2.setContentAreaFilled(false);
+//        btn3.setContentAreaFilled(false);
+//        btn4.setContentAreaFilled(false);
+//        btn5.setContentAreaFilled(false);
+
+        btn0.setBounds(0, image_height, button_width, button_height);
+        btn1.setBounds(button_width * 1 + button_spacing * 1, image_height, button_width, button_height);
+        btn2.setBounds(button_width * 2 + button_spacing * 2 - 15, image_height, button_width, button_height);
+        btn3.setBounds(0, image_height + 30, button_width, button_height);
+        btn4.setBounds(button_width * 1 + button_spacing * 1, image_height + 30, button_width, button_height);
+        btn5.setBounds(button_width * 2 + button_spacing * 2 - 15, image_height + 30, button_width, button_height);
     }
 
     public int getLocation_X() {

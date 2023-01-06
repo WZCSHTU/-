@@ -6,6 +6,10 @@ public class Main {
         //向用户发出提示
         System.out.println("游戏启动中。。。。。。");
 
+        //向程序中加入背景音乐
+        background_music music = new background_music();
+        music.playBackground_music();
+
         //窗口美化
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
